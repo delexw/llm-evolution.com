@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #0d1117;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #e6edf3;
+    position: relative;
+  }
+
+  /* Background gradients */
+  body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 10% 0%, rgba(121,192,255,0.12) 0%, transparent 45%),
+      radial-gradient(ellipse at 90% 100%, rgba(52,211,153,0.08) 0%, transparent 45%),
+      radial-gradient(ellipse at 80% 10%, rgba(124,58,237,0.07) 0%, transparent 35%);
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    padding: 56px 64px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Top section */
+  .top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #79c0ff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 2px;
+    background: #79c0ff;
+    border-radius: 1px;
+  }
+
+  h1 {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #e6edf3;
+    max-width: 780px;
+  }
+
+  h1 span {
+    color: #79c0ff;
+  }
+
+  .desc {
+    font-size: 18px;
+    color: #8b949e;
+    line-height: 1.6;
+    max-width: 680px;
+  }
+
+  /* Stats row */
+  .stats {
+    display: flex;
+    gap: 48px;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .stat-val {
+    font-size: 36px;
+    font-weight: 800;
+    color: #e6edf3;
+    line-height: 1;
+  }
+
+  .stat-val.blue  { color: #79c0ff; }
+  .stat-val.green { color: #56d364; }
+  .stat-val.purple{ color: #d2a8ff; }
+
+  .stat-lab {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #8b949e;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  /* Provider pills */
+  .providers {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pill {
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    border: 1px solid;
+  }
+
+  .pill.openai    { background: rgba(16,163,127,.15); color: #34d399; border-color: rgba(52,211,153,.25); }
+  .pill.anthropic { background: rgba(199,124,44,.15); color: #fbbf24; border-color: rgba(251,191,36,.25); }
+  .pill.google    { background: rgba(26,115,232,.15); color: #79c0ff; border-color: rgba(121,192,255,.25); }
+  .pill.meta      { background: rgba(8,102,255,.15);  color: #60a5fa; border-color: rgba(96,165,250,.25); }
+  .pill.mistral   { background: rgba(232,82,11,.15);  color: #fb923c; border-color: rgba(251,146,60,.25); }
+  .pill.xai       { background: rgba(240,246,255,.08);color: #c9d1d9; border-color: rgba(201,209,217,.2); }
+  .pill.deepseek  { background: rgba(91,95,199,.15);  color: #a78bfa; border-color: rgba(167,139,250,.25); }
+  .pill.more      { background: rgba(148,163,184,.08);color: #8b949e; border-color: rgba(139,148,158,.2); }
+
+  /* Right-side decorative timeline */
+  .timeline-deco {
+    position: absolute;
+    right: 64px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-end;
+  }
+
+  .tl-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 0;
+    position: relative;
+  }
+
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .tl-item:first-child::before { top: 50%; }
+  .tl-item:last-child::before  { bottom: 50%; }
+
+  .tl-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #8b949e;
+    text-align: right;
+  }
+
+  .tl-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid;
+    background: #0d1117;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tl-dot.blue   { border-color: #79c0ff; }
+  .tl-dot.green  { border-color: #56d364; }
+  .tl-dot.purple { border-color: #d2a8ff; }
+  .tl-dot.amber  { border-color: #e3b341; }
+  .tl-dot.red    { border-color: #f85149; }
+  .tl-dot.teal   { border-color: #39d353; }
+
+  .tl-dot.active {
+    box-shadow: 0 0 0 3px rgba(121,192,255,0.2);
+  }
+
+  /* Site URL */
+  .url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #8b949e;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .url::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #56d364;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="top">
+    <div class="eyebrow">Complete Reference Guide</div>
+    <h1>LLM Model Evolution<br><span>2024 – 2026</span></h1>
+    <p class="desc">Track every major language model release across all leading AI labs — timelines, capabilities, context windows, and more.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-val blue">239</div>
+      <div class="stat-lab">Models Tracked</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val green">11</div>
+      <div class="stat-lab">AI Labs</div>
+    </div>
+    <div class="stat">
+      <div class="stat-val purple">3</div>
+      <div class="stat-lab">Years Covered</div>
+    </div>
+  </div>
+
+  <div style="display:flex; flex-direction:column; gap:14px;">
+    <div class="providers">
+      <div class="pill openai">OpenAI</div>
+      <div class="pill anthropic">Anthropic</div>
+      <div class="pill google">Google</div>
+      <div class="pill meta">Meta</div>
+      <div class="pill mistral">Mistral</div>
+      <div class="pill xai">xAI</div>
+      <div class="pill deepseek">DeepSeek</div>
+      <div class="pill more">+4 more</div>
+    </div>
+    <div class="url">llm-evolution.com</div>
+  </div>
+</div>
+
+<!-- Decorative timeline on right -->
+<div class="timeline-deco">
+  <div class="tl-item"><span class="tl-label">GPT-4o</span><div class="tl-dot blue"></div></div>
+  <div class="tl-item"><span class="tl-label">Claude 3.5 Sonnet</span><div class="tl-dot amber"></div></div>
+  <div class="tl-item"><span class="tl-label">Gemini 1.5 Pro</span><div class="tl-dot blue active"></div></div>
+  <div class="tl-item"><span class="tl-label">Llama 3.1 405B</span><div class="tl-dot green"></div></div>
+  <div class="tl-item"><span class="tl-label">o1-preview</span><div class="tl-dot purple"></div></div>
+  <div class="tl-item"><span class="tl-label">DeepSeek-V3</span><div class="tl-dot teal"></div></div>
+  <div class="tl-item"><span class="tl-label">Claude 3.7 Sonnet</span><div class="tl-dot amber"></div></div>
+  <div class="tl-item"><span class="tl-label">Gemini 2.5 Pro</span><div class="tl-dot blue"></div></div>
+  <div class="tl-item"><span class="tl-label">GPT-4.5</span><div class="tl-dot red"></div></div>
+</div>
+</body>
+</html>
