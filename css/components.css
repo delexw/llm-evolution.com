@@ -1,0 +1,43 @@
+/* Card */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+.card-hero{box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.card-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
+.card-sub{font-size:12px;color:var(--dim);font-family:var(--mono);margin-bottom:16px}
+
+/* KPI */
+.kpi-val{font-size:30px;font-weight:800;color:var(--text);line-height:1;margin-bottom:5px}
+.kpi-label{font-size:13px;color:var(--dim);font-weight:500}
+.kpi-note{font-size:11px;color:var(--dim);font-family:var(--mono);margin-top:4px}
+
+/* Chart box */
+.chart-box{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px}
+
+/* Search */
+.search-bar{width:100%;padding:10px 16px;font-size:14px;font-family:var(--font);border:1.5px solid var(--border2);border-radius:10px;background:var(--surface);color:var(--text);margin-bottom:20px;outline:none;transition:border-color .15s}
+.search-bar:focus{border-color:var(--accent)}
+
+/* Filter chips */
+.chip-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.chip{font-size:12px;font-weight:600;font-family:var(--mono);padding:5px 13px;border-radius:16px;border:1.5px solid var(--border2);background:var(--surface);color:var(--dim);cursor:pointer;transition:all .15s}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip.on{color:var(--surface);background:var(--accent);border-color:var(--accent)}
+
+/* Filter button */
+.fbtn{font-size:12px;font-weight:600;font-family:var(--mono);padding:5px 12px;border-radius:16px;border:1.5px solid var(--border2);background:var(--surface);cursor:pointer;transition:all .15s}
+.fbtn:hover{border-color:currentColor}
+.fbtn.on{border-color:currentColor;background:color-mix(in srgb,currentColor 10%,transparent)}
+
+/* Tier badge */
+.tier-badge{display:inline-block;padding:2px 7px;border-radius:6px;font-size:10px;font-weight:600;font-family:var(--mono);background:var(--surface2);color:var(--dim);border:1px solid var(--border)}
+
+/* Tier colors */
+.tier-frontier{background:rgba(220,38,38,.1);color:#dc2626;border-color:rgba(220,38,38,.25)}
+.tier-reasoning{background:rgba(124,58,237,.1);color:#7c3aed;border-color:rgba(124,58,237,.25)}
+.tier-efficient{background:rgba(5,150,105,.1);color:#059669;border-color:rgba(5,150,105,.25)}
+.tier-open-source{background:rgba(37,99,235,.1);color:#2563eb;border-color:rgba(37,99,235,.25)}
+.tier-coding{background:rgba(13,148,136,.1);color:#0d9488;border-color:rgba(13,148,136,.25)}
+.tier-nano,.tier-edge,.tier-small{background:rgba(100,116,139,.1);color:#64748b;border-color:rgba(100,116,139,.25)}
+.tier-multimodal{background:rgba(225,29,72,.1);color:#e11d48;border-color:rgba(225,29,72,.25)}
+.tier-video,.tier-image,.tier-audio{background:rgba(217,119,6,.1);color:#d97706;border-color:rgba(217,119,6,.25)}
+.tier-agent,.tier-coding-agent{background:rgba(245,158,11,.1);color:#f59e0b;border-color:rgba(245,158,11,.25)}
+.tier-balanced{background:rgba(107,114,128,.1);color:#6b7280;border-color:rgba(107,114,128,.25)}

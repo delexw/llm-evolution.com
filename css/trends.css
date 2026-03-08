@@ -1,0 +1,37 @@
+/* Context chart bars */
+.ctx-timeline{position:relative;padding-left:24px;margin-top:8px}
+.ctx-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;font-size:12px}
+.ctx-label{width:180px;flex-shrink:0;color:var(--text2);font-size:12px;text-align:right}
+.ctx-bar-wrap{flex:1;height:22px;background:var(--surface2);border-radius:4px;overflow:hidden;position:relative}
+.ctx-bar{height:100%;border-radius:4px;display:flex;align-items:center;padding:0 8px;font-family:var(--mono);font-size:10px;font-weight:600;color:white;white-space:nowrap;min-width:40px;transition:width .5s ease}
+.ctx-date{width:80px;flex-shrink:0;font-family:var(--mono);font-size:10px;color:var(--dim)}
+
+/* Trend cards */
+.trend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.trend-card{border-radius:12px;padding:18px;border:1px solid transparent}
+.trend-card.green{background:rgba(5,150,105,.07);border-color:rgba(5,150,105,.2)}
+.trend-card.blue{background:rgba(37,99,235,.07);border-color:rgba(37,99,235,.2)}
+.trend-card.amber{background:rgba(217,119,6,.07);border-color:rgba(217,119,6,.2)}
+.trend-card.purple{background:rgba(124,58,237,.07);border-color:rgba(124,58,237,.2)}
+.trend-card.red{background:rgba(220,38,38,.07);border-color:rgba(220,38,38,.2)}
+.trend-card h4{font-size:13px;font-weight:700;margin-bottom:8px}
+.trend-card.green h4{color:var(--green)}
+.trend-card.blue h4{color:var(--blue)}
+.trend-card.amber h4{color:var(--amber)}
+.trend-card.purple h4{color:var(--purple)}
+.trend-card.red h4{color:var(--red)}
+.trend-card p{font-size:13px;color:var(--text2);line-height:1.6}
+
+/* Size distribution */
+.size-grid{display:flex;flex-wrap:wrap;gap:8px}
+.size-chip{padding:6px 14px;border-radius:8px;font-family:var(--mono);font-size:12px;font-weight:600;display:flex;flex-direction:column;gap:2px;min-width:90px}
+.size-chip-val{font-size:18px;font-weight:800;color:var(--text)}
+.size-chip-lab{font-size:11px;color:var(--dim)}
+
+/* Responsive table */
+.tbl-scroll{overflow-x:auto;border-radius:12px;border:1px solid var(--border)}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{background:var(--bg2);padding:9px 13px;text-align:left;font-size:11px;font-family:var(--mono);font-weight:600;text-transform:uppercase;letter-spacing:.7px;color:var(--dim);border-bottom:1px solid var(--border2)}
+.tbl td{padding:9px 13px;border-bottom:1px solid var(--border);vertical-align:middle}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:var(--accent-bg)}

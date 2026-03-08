@@ -1,0 +1,16 @@
+/* Timeline */
+.tl{position:relative;padding-left:28px}
+.tl::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent),var(--purple),var(--green));opacity:.2;border-radius:1px}
+.tl-yr{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--accent);margin:24px 0 10px -20px;display:flex;align-items:center;gap:8px}
+.tl-yr::after{content:'';flex:1;height:1px;background:var(--border)}
+.tl-item{position:relative;margin-bottom:10px}
+.tl-dot{position:absolute;left:-24px;top:10px;width:9px;height:9px;border-radius:50%;border:2px solid var(--bg)}
+.tl-card2{background:var(--surface);border:1px solid var(--border);border-radius:9px;padding:11px 15px;transition:box-shadow .15s}
+.tl-card2:hover{box-shadow:0 3px 12px rgba(0,0,0,0.08)}
+.tl-row{display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:3px}
+.tl-mname{font-size:13px;font-weight:700;color:var(--text)}
+.tl-pbadge{font-size:11px;font-weight:600;font-family:var(--mono);padding:1px 7px;border-radius:10px}
+.tl-size{font-family:var(--mono);font-size:11px;color:var(--teal)}
+.tl-ctx2{font-family:var(--mono);font-size:10px;color:var(--blue)}
+.tl-d{font-family:var(--mono);font-size:11px;color:var(--dim);margin-left:auto}
+.tl-detail{font-size:12px;color:var(--dim);line-height:1.5}

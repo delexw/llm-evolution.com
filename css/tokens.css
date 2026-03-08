@@ -1,0 +1,46 @@
+/* Design tokens — colors, fonts, themes */
+:root {
+  --font: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  --bg: #f8f9fb;
+  --bg2: #f1f3f7;
+  --surface: #ffffff;
+  --surface2: #f4f5f8;
+  --border: rgba(0,0,0,0.07);
+  --border2: rgba(0,0,0,0.13);
+  --text: #111827;
+  --text2: #374151;
+  --dim: #6b7280;
+  --accent: #1e40af;
+  --accent-bg: rgba(30,64,175,0.07);
+  --green: #059669;
+  --red: #dc2626;
+  --amber: #d97706;
+  --blue: #2563eb;
+  --purple: #7c3aed;
+  --teal: #0d9488;
+  --openai: #10a37f;
+  --anthropic: #c77c2c;
+  --google: #1a73e8;
+  --meta: #0866ff;
+  --mistral: #e8520b;
+  --xai: #000000;
+  --deepseek: #5b5fc7;
+  --alibaba: #e04b00;
+  --nvidia: #76b900;
+  --amazon: #e08a00;
+  --microsoft: #00a3d1;
+  --other: #64748b;
+}
+
+@media(prefers-color-scheme:dark){:root{
+  --bg:#0d1117;--bg2:#161b22;--surface:#1c2128;--surface2:#22272e;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
+  --text:#e6edf3;--text2:#c9d1d9;--dim:#8b949e;
+  --accent:#79c0ff;--accent-bg:rgba(121,192,255,0.1);
+  --green:#56d364;--red:#f85149;--amber:#e3b341;--blue:#79c0ff;
+  --purple:#d2a8ff;--teal:#39d353;
+  --openai:#34d399;--anthropic:#fbbf24;--google:#79c0ff;--meta:#60a5fa;
+  --mistral:#fb923c;--xai:#f0f6ff;--deepseek:#a78bfa;--alibaba:#fdba74;
+  --nvidia:#bef264;--amazon:#fcd34d;--microsoft:#7dd3fc;--other:#94a3b8;
+}}

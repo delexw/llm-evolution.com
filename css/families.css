@@ -1,0 +1,21 @@
+/* Family accordion & model table */
+.family-group{background:var(--surface);border:1px solid var(--border);border-radius:12px;margin-bottom:16px;overflow:hidden}
+.family-header{padding:16px 20px;display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none;background:var(--surface)}
+.family-header:hover{background:var(--surface2)}
+.family-swatch{width:14px;height:14px;border-radius:4px;flex-shrink:0}
+.family-title{font-size:15px;font-weight:700;color:var(--text)}
+.family-count{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.family-arrow{margin-left:auto;font-size:11px;color:var(--dim);transition:transform .2s}
+.family-header.open .family-arrow{transform:rotate(180deg)}
+.family-body{display:none;border-top:1px solid var(--border)}
+.family-body.show{display:block}
+
+/* Model table */
+.model-table{width:100%;border-collapse:collapse;font-size:13px}
+.model-table th{background:var(--bg2);font-family:var(--mono);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.8px;color:var(--dim);padding:9px 14px;text-align:left;position:sticky;top:0}
+.model-table td{padding:9px 14px;border-top:1px solid var(--border)}
+.model-table tr:hover td{background:var(--accent-bg)}
+.model-name{font-weight:600;color:var(--text)}
+.model-size{font-family:var(--mono);font-size:12px;color:var(--teal);font-weight:500}
+.model-ctx{font-family:var(--mono);font-size:11px;color:var(--blue)}
+.model-date{font-family:var(--mono);font-size:11px;color:var(--dim)}

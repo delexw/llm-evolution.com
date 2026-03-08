@@ -1,0 +1,48 @@
+/* Mobile responsive — 480px and below */
+@media(max-width:480px){
+  /* Hero */
+  .hero{padding:22px;margin-bottom:32px;border-radius:14px}
+  .hero h1{font-size:22px}
+  .hero-lead{font-size:15px;margin-bottom:18px}
+  .hero-insight{font-size:13px;padding:10px 14px}
+  .hero-stats{gap:16px 24px}
+  .hero-stat-val{font-size:22px}
+  .hero-stat-lab{font-size:11px}
+
+  /* Sections */
+  .section{margin-bottom:40px}
+  .sect-title{font-size:20px}
+
+  /* KPI */
+  .kpi-val{font-size:24px}
+
+  /* Charts */
+  .chart-box{padding:14px}
+
+  /* Model table — horizontal scroll */
+  .family-body{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .model-table{min-width:560px}
+  .model-table th,.model-table td{padding:8px 10px;font-size:12px}
+  .family-header{padding:12px 14px;gap:8px}
+  .family-title{font-size:13px}
+
+  /* Timeline */
+  .tl{padding-left:22px}
+  .tl-card2{padding:9px 12px}
+  .tl-mname{font-size:12px}
+  .tl-d{margin-left:0;font-size:10px}
+  .tl-row{gap:5px}
+
+  /* Filter chips */
+  .chip{font-size:11px;padding:4px 10px}
+  .fbtn{font-size:11px;padding:4px 10px}
+
+  /* Trend cards */
+  .trend-grid{grid-template-columns:1fr}
+
+  /* Context milestone cards — 2x2 on small */
+  .g4{grid-template-columns:1fr 1fr;gap:10px}
+
+  /* Topnav */
+  .topnav a{font-size:12px;padding:12px 12px}
+}
