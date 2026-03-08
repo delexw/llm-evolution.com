@@ -6,7 +6,7 @@
 <title>LLM Model Evolution 2024–2026 — Complete Reference (239 Models)</title>
 <!-- SEO -->
 <meta name="description" content="Interactive timeline of 239 LLM releases from OpenAI, Anthropic, Google, Meta, Mistral, xAI, DeepSeek and more. Compare context windows, capabilities, and model tiers across 2024–2026.">
-<meta name="keywords" content="LLM, large language models, AI models, GPT-4o, Claude, Gemini, Llama, DeepSeek, AI timeline, model comparison, 2024, 2025, 2026">
+<meta name="keywords" content="LLM, large language models, AI models, GPT-5.4, GPT-4o, o3, o4-mini, Claude Opus 4.6, Claude Sonnet 4.6, Claude 3.7 Sonnet, Gemini 3.1 Pro, Gemini 2.5 Pro, Llama 4 Scout, Llama 4 Maverick, Llama 4 Behemoth, DeepSeek V3, DeepSeek R1, Grok-4.1, Qwen3, Qwen3.5, Mistral Large 3, Phi-4, Amazon Nova, Codestral, AI timeline, model comparison, context window, open source LLM, reasoning models, 2024, 2025, 2026">
 <meta name="author" content="llm-evolution.com">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://llm-evolution.com/">
@@ -32,14 +32,98 @@
 
 <!-- Schema.org structured data -->
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "LLM Evolution",
-  "url": "https://llm-evolution.com/",
-  "description": "Interactive timeline and reference of 239 large language models from OpenAI, Anthropic, Google, Meta, Mistral, xAI, DeepSeek and more, covering 2024–2026.",
-  "inLanguage": "en-US"
-}
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "LLM Evolution",
+    "url": "https://llm-evolution.com/",
+    "description": "Interactive timeline and reference of 239 large language models from OpenAI, Anthropic, Google, Meta, Mistral, xAI, DeepSeek and more, covering 2024–2026.",
+    "inLanguage": "en-US",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://llm-evolution.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "LLM Model Evolution 2024–2026",
+    "description": "A comprehensive dataset of 239 large language model releases from 11 AI labs including OpenAI, Anthropic, Google DeepMind, Meta AI, Mistral, xAI, DeepSeek, Alibaba, NVIDIA, Amazon, and Microsoft. Covers model names, release dates, context windows, parameter counts, capabilities, and tier classifications.",
+    "url": "https://llm-evolution.com/",
+    "keywords": ["LLM", "large language models", "GPT-5.4", "GPT-4o", "o3", "o4-mini", "Claude Opus 4.6", "Claude Sonnet 4.6", "Gemini 3.1 Pro", "Gemini 2.5 Pro", "Llama 4", "DeepSeek R1", "DeepSeek V3", "Grok-4.1", "Qwen3.5", "Mistral Large 3", "AI timeline", "model comparison", "reasoning models", "open source LLM"],
+    "temporalCoverage": "2024/2026",
+    "creator": {
+      "@type": "Organization",
+      "name": "LLM Evolution",
+      "url": "https://llm-evolution.com/"
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many LLMs were released between 2024 and 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "239 models across 24 families from 12 providers were released between April 2024 and March 2026. The providers include OpenAI, Anthropic, Google DeepMind, Meta AI, Mistral AI, xAI, DeepSeek, Alibaba (Qwen), NVIDIA, Microsoft, and Amazon."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the frontier-tier LLMs as of 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Frontier-tier models as of March 2026 include GPT-5.4 (1M context), Claude Opus 4.6 and Claude Sonnet 4.6 (1M context), Gemini 3.1 Pro (2M context), and Grok-4.1 (256K context). Claude Sonnet 4.6 beats Opus-class performance at a lower cost of $3/M tokens."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which LLMs have the longest context windows?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Context windows grew 1,250× from 8K to 10M tokens. Llama 4 Scout, Maverick, and Behemoth lead at 10M tokens (open-source, free). Gemini 3.1 Pro and Gemini 3 Pro support 2M tokens. GPT-5.4, Claude Opus 4.6, and Claude Sonnet 4.6 support 1M tokens."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the best open-source LLMs in 2025–2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Top open-source models include Llama 4 Behemoth (~2T params, 10M context), Llama 4 Maverick (~400B active, 10M context), DeepSeek V3 (671B total, 128K context), DeepSeek R1 (matched o1 at open-source cost), Qwen3.5-9B (beats 120B models), and Mistral Large 3. 47 open-source models are tracked in total."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are reasoning LLMs and which models support it?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reasoning models use chain-of-thought as a first-class capability, pioneered by OpenAI o1-preview in September 2024. By 2025, every major provider offers reasoning: OpenAI o3/o4-mini, Google Gemini 3 Deep Think (2M context), Anthropic Claude Extended Thinking, xAI Grok-3, DeepSeek R1, and Alibaba QwQ-32B."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How did LLM pricing change from 2024 to 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LLM pricing collapsed dramatically: Gemini dropped ~70% in August 2024, DeepSeek R1 undercut OpenAI o1 by 95%, Mistral offered a free API tier, and GPT-4-level intelligence dropped to ~$0.01/1K tokens by 2026. The imitation cycle compressed from 12 months to just 6 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the key AI trends from 2024 to 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Five major trends: (1) Open-source models matched frontier quality — Qwen3.5-9B beats 120B models; (2) Reasoning became a first-class capability tier across all providers; (3) Agentic AI replaced chatbots — models now run code, browse web, and control computers; (4) Pricing wars collapsed costs by 95%+; (5) Multimodal became table stakes — text-only models are effectively deprecated."
+        }
+      }
+    ]
+  }
+]
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
