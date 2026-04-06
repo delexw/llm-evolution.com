@@ -1,5 +1,6 @@
 /* Nav */
-.topnav{position:sticky;top:0;z-index:200;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;gap:0;overflow-x:auto;scrollbar-width:none;padding:0 48px}
+.topnav{position:sticky;top:0;z-index:200;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);display:flex;gap:0;overflow-x:auto;scrollbar-width:none;padding:0 48px;align-items:center}
+.topnav-github{margin-left:auto;display:flex;align-items:center;gap:6px;border-bottom:none !important}
 .topnav::-webkit-scrollbar{display:none}
 .topnav a{font-size:13px;font-weight:500;color:var(--dim);text-decoration:none;padding:14px 16px;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
 .topnav a:hover{color:var(--text)}
